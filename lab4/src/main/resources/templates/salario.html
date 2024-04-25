@@ -55,7 +55,7 @@
 
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="index.html">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard</span></a>
                 </li>
@@ -78,24 +78,53 @@
 
 
             </ul>
+            <div class="board">
+                <div class="titulo_grafica">
+                    <h3 class="t_grafica">Reporte - Sueldos</h3>
+                </div>
+                <div class="sub_board">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Puesto</th>
+                                <th scope="col">Salario Maximo</th>
+                                <th scope="col">Salario Minimo</th>
+                                <th scope="col">Salario Total</th>
+                                <th scope="col">Salario Promedio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="trabajo : ${listaTrabajos}">
+                                <td th:text="${trabajo.job_title}"></td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>hola</td>
+                                <td>hola</td>
+                                <td><a class="btn btn-dark">Ver empleados</a></td>
+                                <td><a class="btn btn-dark" th:href="@{'/editar' + '?+id=' + ${trabajo.id}">Editar</a></td>
+                                <td><a class="btn btn-danger">Eliminar</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-        </div>
-        <!-- Bootstrap core JavaScript-->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <!-- Bootstrap core JavaScript-->
+            <script src="vendor/jquery/jquery.min.js"></script>
+            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Core plugin JavaScript-->
-        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+            <!-- Core plugin JavaScript-->
+            <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-        <!-- Custom scripts for all pages-->
-        <script src="js/sb-admin-2.min.js"></script>
+            <!-- Custom scripts for all pages-->
+            <script src="js/sb-admin-2.min.js"></script>
 
-        <!-- Page level plugins -->
-        <script src="vendor/chart.js/Chart.min.js"></script>
+            <!-- Page level plugins -->
+            <script src="vendor/chart.js/Chart.min.js"></script>
 
-        <!-- Page level custom scripts -->
-        <script src="js/demo/chart-area-demo.js"></script>
-        <script src="js/demo/chart-pie-demo.js"></script>
+            <!-- Page level custom scripts -->
+            <script src="js/demo/chart-area-demo.js"></script>
+            <script src="js/demo/chart-pie-demo.js"></script>
 
     </body>
 
